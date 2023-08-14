@@ -4,14 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
-import org.hibernate.dialect.MySQL8Dialect;
-import org.hibernate.dialect.MySQLDialect;
+
+// import org.hibernate.dialect.MySQLDialect;
 
 @Entity
 @Table(name="booktable")
 public class book {
-    MySQLDialect
-    @id
+    // MySQLDialect
+    // @id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String title;
