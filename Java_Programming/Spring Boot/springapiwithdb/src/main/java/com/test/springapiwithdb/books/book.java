@@ -1,61 +1,31 @@
 package com.test.springapiwithdb.books;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-// import org.hibernate.dialect.MySQLDialect;
+
 
 @Entity
-@Table(name="booktable")
+@Data
+@Table(name="booktable1")
+@NoArgsConstructor
+@AllArgsConstructor
 public class book {
-    // MySQLDialect
-    // @id
+  
+    @id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column("id")
     private int id;
+    @Column("title")
     private String title;
+    @Column("author")
     private String author;
 
-    @Override
-    public String toString() {
-        return "book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                '}';
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public book() {
-    }
-
-    public book(int id, String title, String author) {
-        this.id = id;
-        this.title = title;
-        this.author = author;
-    }
+    
 }
