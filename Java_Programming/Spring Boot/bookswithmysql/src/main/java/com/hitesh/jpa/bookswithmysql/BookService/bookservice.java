@@ -1,6 +1,8 @@
 package com.hitesh.jpa.bookswithmysql.BookService;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.hitesh.jpa.bookswithmysql.BookRepo.bookrepo;
@@ -26,7 +28,13 @@ public class bookservice {
     }
 
     public List<book> getallbooks(){
-        return bookrepo.findAll();
+
+        return (List<book>) bookrepo.findAll();
+    }
+
+    public Optional<book> getbook(int id){
+
+        return bookrepo.findById(id);
     }
 
     public String deleteDetail(int id){

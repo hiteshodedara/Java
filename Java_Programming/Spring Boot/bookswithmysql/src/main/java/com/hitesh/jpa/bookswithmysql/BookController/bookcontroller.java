@@ -1,6 +1,8 @@
 package com.hitesh.jpa.bookswithmysql.BookController;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.hitesh.jpa.bookswithmysql.BookService.bookservice;
@@ -28,7 +30,7 @@ public class bookcontroller {
         bookservice.deleteDetail(id);
         return "Deleted";
     }
-    @DeleteMapping("/deleteallbook")
+    @DeleteMapping("/deletebooks")
     public String deleteallbook(){
         bookservice.deleteDetailall();
         return "All Books Deleted";
@@ -37,5 +39,10 @@ public class bookcontroller {
     @GetMapping("/getbooks")
     public List<book> getBooks(){
         return bookservice.getallbooks();
+    }
+
+    @GetMapping("/getbook/{id}")
+    public Optional<book> getBooks(@PathVariable int id){
+        return bookservice.getbook(id);
     }
 }
