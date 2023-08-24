@@ -6,6 +6,6 @@ public static void main(String[] args) {
     x=new boolean[10];
     x[2]=true;
     System.out.println(a);
-    // System.out.println(x[2]);
+    System.out.println(x[2]);
 }
 }
