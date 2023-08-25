@@ -19,16 +19,16 @@ abstract class ok {
 class child extends ok {
     String hello;
 
-    child(int id,String name,String email,int age){
-        super(id,name,email,age);
+    child(int id, String name, String email, int age) {
+        super(id, name, email, age);
     }
 }
 
 public class abstrectconst {
 
     public static void main(String[] args) {
-        child ch=new child(1, "name", "hitesh", 20);
-        System.out.println("hello");
+        child ch = new child(1, "name", "hitesh", 20);
+        System.out.println(ch);
 
     }
 }
