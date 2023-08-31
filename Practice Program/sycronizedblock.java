@@ -52,7 +52,7 @@ public class sycronizedblock {
         mysycblock ms1 = new mysycblock(d3, "hitesh");
         mysycblock ms2 = new mysycblock(d3, "Raju");
 
-        //Starting a Thread...
+        //Starting a Thread... 
         ms1.start();
         ms2.start();
     }
