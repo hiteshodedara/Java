@@ -1,5 +1,5 @@
 class A{
-    public synchronized void d1(b b) throws InterruptedException{
+    public synchronized void d1(B b) throws InterruptedException{
         System.out.println(" a method started...");
         Thread.sleep(10000);
         System.out.println("try to execute last method of A ...");
@@ -11,7 +11,7 @@ class A{
 }
 
 class B{
-    public synchronized void d2(a a) throws InterruptedException{
+    public synchronized void d2(A a) throws InterruptedException{
         System.out.println(" b method started...");
         Thread.sleep(10000);
         System.out.println("try to execute last method of B ...");
