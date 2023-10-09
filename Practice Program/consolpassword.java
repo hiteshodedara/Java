@@ -17,7 +17,7 @@ public static void login() {
 			} finally {
 				if (password != null) {
 					java.util.Arrays.fill(password, ' ');
-				}
+					}
 			}
 		} else {
 			throw new RuntimeException("Can't get password...No console");
