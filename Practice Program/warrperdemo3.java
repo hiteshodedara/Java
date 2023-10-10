@@ -12,10 +12,10 @@ public class warrperdemo3 {
         // Integer s6=Integer.valueOf(10);
         // System.out.println(s5==s6);
 
-        Integer s1=127;
-        Integer s2=127;
-        System.out.println(s1==s2);
-        System.out.println(s1.equals(s2));
+        // Integer s1=127;
+        // Integer s2=127;
+        // System.out.println(s1==s2);
+        // System.out.println(s1.equals(s2));
         int var=42;
         int var2=~var;
         System.out.println(var2);
